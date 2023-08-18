@@ -49,6 +49,8 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
   @override
   void didChangeMetrics() {
     final ui.Display? otherDisplay = display;
+    print('Hello 1: ${display?.size.width}');
+    print('Hello 1: ${display?.size.height}');
     if (otherDisplay == null) {
       return;
     }
@@ -65,12 +67,12 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      // home: Homepage(),
-      home: ResponsiveLayout(
-        mobileBody: MobileBody(),
-        tabletBody: TabletBody(),
-        webBody: DesktopBody(),
-      ),
+      home: Homepage(),
+      // home: ResponsiveLayout(
+      //   mobileBody: MobileBody(),
+      //   tabletBody: TabletBody(),
+      //   webBody: DesktopBody(),
+      // ),
     );
   }
 }

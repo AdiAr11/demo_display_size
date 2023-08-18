@@ -9,11 +9,12 @@ class Homepage extends StatelessWidget {
 
     final Size size = MediaQuery.of(context).size;
 
-    print('Width: ${size.width}');
-    print('Height: ${size.height}');
+    // print('Width: ${size.width}');
+    // print('Height: ${size.height}');
+    print('Hello 2: ${display?.size.width}');
 
     return Scaffold(
-      backgroundColor: size.width < 600 ? Colors.purple : Colors.green,
+      backgroundColor: size.width < 600 ? Colors.purple : Colors.yellow,
       appBar: AppBar(
         title: const Text('Responsive App Demo'),
       ),
